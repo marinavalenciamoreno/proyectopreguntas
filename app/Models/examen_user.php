@@ -14,6 +14,6 @@ class examen_user extends Model
         'examen_id',
         'correctas',
         'fecha_realizar'
-    ]
+    ];
 
 }
