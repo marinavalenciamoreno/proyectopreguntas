@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function nivel(){
+        return $this->belongsTo('App\Models\Nivel', 'nivel_id');
+    }
+
+    public function examen(){
+        return $this->belongsToMany('App\Models\Examen');
+    }
 }
