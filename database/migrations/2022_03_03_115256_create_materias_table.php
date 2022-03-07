@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string("nombre");
             $table->bigInteger("niveleseducativos_id")->unsigned();
             $table->foreign("niveleseducativos_id")->references("id")->on("niveleseducativos")->onDelete("cascade");
-            $table->foreign("users_id")->references("id")->on("users")->onDelete("cascade");
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('nivel');
             $table->integer('numPreguntas');
             $table->date('fecha_inicio');
-            $fecha->date('fecha_fin');
+            $table->date('fecha_fin');
             $table->foreign('tema_id')->references('id')->on('temas')->onDelete('cascade');
             $table->timestamps();
         });
