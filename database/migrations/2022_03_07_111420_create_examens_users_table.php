@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('examenes_users', function (Blueprint $table) {
+        Schema::create('examens_users', function (Blueprint $table) {
             $table->id();
             $table->date("fecha_realización");
             $table->integer("num_respuestas_correctas")->unsigned();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('examenes_users');
+        Schema::dropIfExists('examens_users');
     }
 };
