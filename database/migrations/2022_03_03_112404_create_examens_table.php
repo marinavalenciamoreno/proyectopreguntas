@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('examens', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('tipo', ['alumno', 'profesor','admin'])->default('alumno');
-            $table->rememberToken();
+            $table->bigInteger('id_tema')->unsigned();
+            $table->string('nivel');
+            $table->integer('numPreguntas');
+            $table->date('fecha_inicio');
+            $fecha->date('fecha_fin');
+            $table->foreign('id_tema')->references('id')->on('temas')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('examens');
     }
 };

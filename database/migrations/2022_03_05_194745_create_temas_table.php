@@ -6,19 +6,14 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
-        Schema::create('examen', function (Blueprint $table) {
+        Schema::create('temas', function (Blueprint $table) {
             $table->id();
-            $table->string('nivel');
-            $table->integer('numPreguntas');
-            $table->date('fecha_inicio');
-            $fecha->date('fecha_fin');
+            $table->bigInteger("id_materia")->unsigned();
+            $table->string("numero");
+            $table->string("nombre");
+            $table->foreign("id_materia")->references("id")->on("materias");
             $table->timestamps();
         });
     }
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('examen');
+        Schema::dropIfExists('temas');
     }
 };
