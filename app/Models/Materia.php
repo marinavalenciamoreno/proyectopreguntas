@@ -12,10 +12,12 @@ class Materia extends Model
     ];
 
     public function user(){ //Profesor
-        return $this->belongsTo('App\Models\User', 'user_id');
+        return $this->belongsTo('App\Models\User', 'profesor_id');
     }
 
     public function nivel(){
-        return $this->belongsTo('App\Models\Nivel', 'nivel_id');
+        return $this->belongsTo('App\Models\Nivel');
     }
+
+    
 }

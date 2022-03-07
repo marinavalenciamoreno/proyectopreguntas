@@ -13,12 +13,13 @@ class Pregunta extends Model
         'respuesta1',
         'respuesta2',
         'respuesta3',
-        'respcorrect',
+        'respuesta4',
+        'correct',
         'tema_id'
     ];
 
     public function tema(){
-        return $this->belongsTo('App\Models\Tema', 'tema_id');
+        return $this->belongsTo('App\Models\Tema');
     }
 
 }
