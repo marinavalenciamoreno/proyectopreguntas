@@ -15,7 +15,7 @@ class Examen extends Model
     ];
 
     public function tema(){
-        return $this->belongsTo('App\Models\Tema', 'tema_id');
+        return $this->belongsTo('App\Models\Tema');
     }
 
     public function user(){

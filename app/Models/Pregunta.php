@@ -13,7 +13,8 @@ class Pregunta extends Model
         'respuesta1',
         'respuesta2',
         'respuesta3',
-        'respcorrect',
+        'respuesta4',
+        'correcta',
         'tema_id'
     ];
 

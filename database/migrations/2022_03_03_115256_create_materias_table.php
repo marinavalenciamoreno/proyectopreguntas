@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
-            $table->bigInteger("id_niveleducativo")->unsigned();
-            $table->bigInteger("id_profesor")->unsigned();
-            $table->foreign("id_niveleseducativos")->references("id")->on("niveleseducativos")->onDelete("cascade");
-            $table->foreign("id_profesor")->references("id")->on("users")->onDelete("cascade");
+            $table->bigInteger("niveleseducativos_id")->unsigned();
+            $table->bigInteger("users_id")->unsigned();
+            $table->foreign("niveleseducativos_id")->references("id")->on("niveleseducativos")->onDelete("cascade");
+            $table->foreign("users_id")->references("id")->on("users")->onDelete("cascade");
             $table->timestamps();
         });
     }

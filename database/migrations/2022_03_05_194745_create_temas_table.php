@@ -10,10 +10,10 @@ return new class extends Migration
     {
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger("id_materia")->unsigned();
+            $table->bigInteger("materia_id")->unsigned();
             $table->string("numero");
             $table->string("nombre");
-            $table->foreign("id_materia")->references("id")->on("materias");
+            $table->foreign("materia_id")->references("id")->on("materias");
             $table->timestamps();
         });
     }

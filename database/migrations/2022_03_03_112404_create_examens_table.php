@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('examens', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_tema')->unsigned();
+            $table->bigInteger('tema_id')->unsigned();
             $table->string('nivel');
             $table->integer('numPreguntas');
             $table->date('fecha_inicio');
             $fecha->date('fecha_fin');
-            $table->foreign('id_tema')->references('id')->on('temas')->onDelete('cascade');
+            $table->foreign('tema_id')->references('id')->on('temas')->onDelete('cascade');
             $table->timestamps();
         });
     }

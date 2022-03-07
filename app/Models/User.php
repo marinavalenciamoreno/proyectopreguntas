@@ -43,7 +43,7 @@ class User extends Authenticatable
     ];
 
     public function nivel(){
-        return $this->belongsTo('App\Models\Nivel', 'nivel_id');
+        return $this->belongsTo('App\Models\Nivel');
     }
 
     public function examen(){

@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->date("fecha_realización");
             $table->integer("num_respuestas_correctas")->unsigned();
-            $table->bigInteger("id_examen")->unsigned();
-            $table->bigInteger("id_usuario")->unsigned();
-            $table->foreign("id_examen")->references("id")->on("examens")->onDelete("cascade");
-            $table->foreign("id_usuario")->references("id")->on("users")->onDelete("cascade");
+            $table->bigInteger("examen_id")->unsigned();
+            $table->bigInteger("user_id")->unsigned();
+            $table->foreign("examen_id")->references("id")->on("examens")->onDelete("cascade");
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
             $table->timestamps();
         });
     }

@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Tema extends Model
 {
     protected $fillable=[
-        'numeroTema',
+        'numero',
         'nombre'
     ];
 
     public function materia(){
-        return $this->belongsTo('App\Models\Materia', 'materia_id');
+        return $this->belongsTo('App\Models\Materia');
     }
 
     public function pregunta(){

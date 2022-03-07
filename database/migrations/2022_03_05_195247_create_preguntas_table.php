@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('preguntas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_tema')->unsigned();
+            $table->bigInteger('tema_id')->unsigned();
             $table->enum('nivel', ['básico', 'medio','avanzado']);
             $table->string('enunciado');
             $table->string('respuesta1');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('respuesta3');
             $table->string('respuesta4');
             $table->string('correcta');
-            $table->foreign('id_tema')->references('id')->on('temas');
+            $table->foreign('tema_id')->references('id')->on('temas');
             $table->timestamps();
         });
     }
