@@ -16,23 +16,20 @@ class NivelEducativoSeeder extends Seeder
     {
         //
         DB::table('niveleseducativos')->insert([
-            'nombre' => "1º ESO",  
+            [
+                'nombre' => '1ESO'
+            ],
+            [
+                'nombre' => '2ESO'
+            ],
+            [
+                'nombre' => '3ESO'
+            ],
+            [
+                'nombre' => '4ESO'
+            ]
         ]);
-        DB::table('niveleseducativos')->insert([
-            'nombre' => "2º ESO",  
-        ]);
-        DB::table('niveleseducativos')->insert([
-            'nombre' => "3º ESO",  
-        ]);
-        DB::table('niveleseducativos')->insert([
-            'nombre' => "4º ESO",  
-        ]);
-        DB::table('niveleseducativos')->insert([
-            'nombre' => "1º BACH",  
-        ]);
-        DB::table('niveleseducativos')->insert([
-            'nombre' => "2º BACH",  
-        ]);
+        
     }
     
 }
