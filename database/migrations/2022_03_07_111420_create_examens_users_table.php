@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('examens_users', function (Blueprint $table) {
             $table->id();
-            $table->date("fecha_realización");
-            $table->integer("num_respuestas_correctas")->unsigned();
+            $table->date("fecha_realización")->nullable();
+            $table->integer("num_respuestas_correctas")->unsigned()->nullable();
             $table->bigInteger("examen_id")->unsigned();
             $table->bigInteger("user_id")->unsigned();
             $table->foreign("examen_id")->references("id")->on("examens")->onDelete("cascade");
