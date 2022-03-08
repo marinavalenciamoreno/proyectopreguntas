@@ -11,6 +11,7 @@ class Materia extends Model
         'nombre',
     ];
 
+    
     public function user(){ //Profesor
         return $this->belongsTo('App\Models\User');
     }
