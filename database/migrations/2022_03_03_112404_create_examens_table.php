@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('examens', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('tema_id')->unsigned();
-            $table->string('nivel');
+            $table->enum('nivel', ['básico', 'medio','avanzado']);
             $table->integer('numPreguntas');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');

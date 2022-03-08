@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Examen extends Model
 {
     protected $fillable=[
+        'tema_id',
         'nivel',
         'numPreguntas',
         'fecha_inicio',
@@ -18,7 +19,11 @@ class Examen extends Model
         return $this->belongsTo('App\Models\Tema');
     }
 
-    public function user(){
-        return $this->belongsToMany('App\Models\User');
+    // Usando la tabla pivot - tabla: examen_user
+
+    public function users(){
+        return $this->belongsToMany('App\Models\User')->withPivot('fecha_realizacion', 'num_respuestas_correctas');
     }
+
+    
 }
