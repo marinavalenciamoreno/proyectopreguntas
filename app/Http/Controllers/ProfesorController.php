@@ -19,4 +19,8 @@ class ProfesorController extends Controller
         $alumnos = User::all();
         return view('profesor.inicio');
     }
+
+    public function tema(){
+        
+    }
 }

@@ -17,7 +17,7 @@ class Materia extends Model
     }
 
     public function nivel(){
-        return $this->belongsTo('App\Models\Niveleseducativo');
+        return $this->belongsTo('App\Models\Nivel');
     }
 
     

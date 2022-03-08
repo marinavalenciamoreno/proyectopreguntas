@@ -44,7 +44,7 @@ class User extends Authenticatable
     ];
 
     public function niveleducativo(){//Alumno
-        return $this->belongsTo('App\Models\Niveleseducativo');
+        return $this->belongsTo('App\Models\Nivel');
     }
 
     // Usando la tabla pivot - tabla: examen_user
@@ -64,7 +64,7 @@ class User extends Authenticatable
     }
 
     public function getMateria(){
-        
+
     }
    
 }

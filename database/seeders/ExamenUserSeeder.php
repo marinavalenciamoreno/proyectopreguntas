@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class ExamenUsuarioSeeder extends Seeder
+class ExamenUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,8 +18,6 @@ class ExamenUsuarioSeeder extends Seeder
     {
             DB::table('examens_users')->insert([
                 [
-                    'fecha_realizacion' => null,
-                    'num_respuestas_correctas' => null,
                     'examen_id' => 1,
                     'user_id' => 2,
                 ],

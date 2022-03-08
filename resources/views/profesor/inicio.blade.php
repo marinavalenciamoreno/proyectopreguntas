@@ -15,7 +15,7 @@
 <form action="{{url('/resultado')}}" meth="post">
     <div class="btn btn-primary">Resultado alumnos</div>
 </form>
-<form action="{{url('/exanen')}}" meth="post">
+<form action="{{url('/tema')}}" meth="post">
     <div class="btn btn-primary">Crear temas</div>
 </form>
 </div>
