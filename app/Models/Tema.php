@@ -12,11 +12,16 @@ class Tema extends Model
         'nombre'
     ];
 
+    public function examens(){
+        return $this->hasMany('App\Models\Examen');
+    }
+
+
     public function materia(){
         return $this->belongsTo('App\Models\Materia');
     }
 
-    public function pregunta(){
+    public function preguntas(){
         return $this->hasMany('App\Models\Pregunta');
     }
 }

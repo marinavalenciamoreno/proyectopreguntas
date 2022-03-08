@@ -11,7 +11,7 @@ class Niveleseducativo extends Model
         'nombre',
     ];
 
-    public function user(){
+    public function users(){//Alumno
         return $this->hasMany('App\Models\User');
     }
 }

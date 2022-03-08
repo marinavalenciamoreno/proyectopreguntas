@@ -43,11 +43,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function nivel(){
-        return $this->belongsTo('App\Models\Nivel');
+    public function nivel(){//Alumno
+        return $this->belongsTo('App\Models\Niveleseducativos');
     }
 
-    public function examen(){
-        return $this->belongsToMany('App\Models\Examen');
+    // Usando la tabla pivot - tabla: examen_user
+    public function examenes(){
+        return $this->hasMany('App\Models\Examen')->withPivot('fecha_realizacion', 'num_respuestas_correctas');
     }
+
+    public function materia(){ //Profesor
+        return $this->hasOne('App\Models\Materia');
+    }
+   
 }
