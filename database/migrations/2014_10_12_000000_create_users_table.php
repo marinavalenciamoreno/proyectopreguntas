@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->bigInteger('niveleducativo_id')->unsigned();
+            $table->bigInteger('niveleducativo_id')->unsigned()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('tipo', ['alumno', 'profesor','admin'])->default('alumno');
