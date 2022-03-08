@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->bigInteger('niveleducativo_id')->unsigned()->nullable();
+            $table->bigInteger('nivel_id')->unsigned()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('tipo', ['alumno', 'profesor','admin'])->default('alumno');
-            $table->foreign('niveleducativo_id')->references('id')->on('niveleseducativos');
+            $table->foreign('nivel_id')->references('id')->on('nivels');
             $table->rememberToken();
             $table->timestamps();
         });

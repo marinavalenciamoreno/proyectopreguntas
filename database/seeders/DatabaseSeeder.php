@@ -21,9 +21,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            NivelEducativoSeeder::class,
+            NivelSeeder::class,
             UsersSeeder::class,
             MateriasSeeder::class,
+            TemaSeeder::class,
             ExamenSeeder::class,
             ExamenUserSeeder::class
         ]);

@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class NivelEducativoSeeder extends Seeder
+class NivelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class NivelEducativoSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('niveleseducativos')->insert([
+        DB::table('nivels')->insert([
             [
                 'nombre' => '1ESO'
             ],

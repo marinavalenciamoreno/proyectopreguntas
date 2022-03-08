@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('materias', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
-            $table->bigInteger("niveleseducativos_id")->unsigned();
-            $table->foreign("niveleseducativos_id")->references("id")->on("niveleseducativos")->onDelete("cascade");
+            $table->bigInteger("nivel_id")->unsigned();
+            $table->foreign("nivel_id")->references("id")->on("nivels")->onDelete("cascade");
             $table->timestamps();
         });
     }
