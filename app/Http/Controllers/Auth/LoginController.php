@@ -40,10 +40,10 @@ class LoginController extends Controller
 
     public function authenticated($request , $user){
         if($user->tipo=='admin'){
-            return redirct('/admin') ;
+            return redirect('/admin') ;
         }else if($user->tipo=='profesor'){
-            return redirct('/profesor') ;
+            return redirect('/profesor') ;
         }else
-            return redirct('/alumno') ;
+            return redirect('/alumno') ;
     }
 }
