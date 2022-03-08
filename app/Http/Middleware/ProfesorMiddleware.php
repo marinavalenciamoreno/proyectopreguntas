@@ -19,6 +19,6 @@ class ProfesorMiddleware
         if($request->user()->tipo=='profesor')
             return $next($request);
 
-        return redirect('home')->with('success', 'Debe ser profesor');
+        return redirect('/')->with('success', 'Debe ser profesor');
     }
 }

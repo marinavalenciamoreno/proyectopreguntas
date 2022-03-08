@@ -19,6 +19,6 @@ class AlumnoMiddleware
         if($request->user()->tipo=='alumno')
             return $next($request);
 
-        return redirect('home')->with('success', 'Debe ser un alumno');
+        return redirect('/')->with('success', 'Debe ser un alumno');
     }
 }

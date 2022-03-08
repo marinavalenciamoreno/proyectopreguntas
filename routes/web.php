@@ -25,7 +25,7 @@ Auth::routes();
 
 Route::get('/alumno', [AlumnoController::class, 'inicio'])->middleware(['auth', 'alumno']);
 
-Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware(['auth','profe']);
+Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware(['auth']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

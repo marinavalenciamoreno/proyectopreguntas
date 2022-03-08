@@ -43,7 +43,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function niveleducativo(){//Alumno
+    public function nivel(){//Alumno
         return $this->belongsTo('App\Models\Nivel');
     }
 
@@ -57,8 +57,8 @@ class User extends Authenticatable
     }
 
     public function getNivel(){
-        if($this->niveleducativo_id)
-            return $this->niveleducativo->nombre;
+        if($this->nivel_id)
+            return $this->nivel->nombre;
 
         return "Sin curso asignado";
     }
