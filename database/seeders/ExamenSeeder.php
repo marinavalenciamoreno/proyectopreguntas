@@ -20,7 +20,7 @@ class ExamenSeeder extends Seeder
             [
                 'tema_id' => 1,
                 'nivel' => 'basico',
-                'numPreguntas' => '15',
+                'numPreguntas' => 15,
                 'fecha_inicio' => '2022-03-08',
                 'fecha_fin' => '2022-03-10'
             ],

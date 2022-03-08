@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Materia;
+use Illuminate\Support\Facades\DB;
 
 class MateriasSeeder extends Seeder
 {
@@ -15,34 +15,34 @@ class MateriasSeeder extends Seeder
      */
     public function run()
     {
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Biología y Geología (1º ESO)",
-            'niveleseducativos_id'=>1
+            'nivel_id'=>1
         ]);
 
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Matemáticas (1º ESO)",
-            'niveleseducativos_id'=>1
+            'nivel_id'=>1
         ]);
 
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Música (2º ESO)",
-            'niveleseducativos_id'=>2
+            'nivel_id'=>2
         ]);
 
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Geología (2º ESO)",
-            'niveleseducativos_id'=>2
+            'nivel_id'=>2
         ]);
 
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Biología y Geología (3º ESO)",
-            'niveleseducativos_id'=>3
+            'nivel_id'=>3
         ]);
 
-        Materia::create([
+        DB::table('materias')->insert([
             'nombre'=>"Física y Química (3º ESO)",
-            'niveleseducativos_id'=>3
+            'nivel_id'=>3
         ]);
     }
 }
