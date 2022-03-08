@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class ProfesorController extends Controller
 {
     
+    // public function __constructor(){
+    //     middlware('profe');
+    // }
+
     public function inicio(){
         return view('profesor.inicio');
     }

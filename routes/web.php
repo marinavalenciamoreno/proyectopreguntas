@@ -23,10 +23,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/alumno', [AlumnoController::class, 'inicio'])->middleware('alumno');;
+Route::get('/alumno', [AlumnoController::class, 'inicio'])->middleware(['auth', 'alumno']);
 
-Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware('profe');
+Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware(['auth','profe']);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::post('/resultado', [ProfesorController::class, 'resultado'])->middleware('profe');
+
+Route::get('/tema', [ProfesorController::class, 'tema']);

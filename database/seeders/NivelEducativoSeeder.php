@@ -31,7 +31,6 @@ class NivelEducativoSeeder extends Seeder
                 'nombre' => '4ESO'
             ]
         ]);
-        
     }
     
 }
