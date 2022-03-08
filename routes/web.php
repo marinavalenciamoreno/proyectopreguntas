@@ -19,4 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/alumno', [AlumnoController::class, 'inicio'])->middlware('alumno');;
+
+Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware('profe');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/resultado', [ProfesorController::class, 'resultado'])->middleware('profe');
