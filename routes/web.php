@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +23,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/alumno', [AlumnoController::class, 'inicio'])->middlware('alumno');;
+Route::get('/alumno', [AlumnoController::class, 'inicio'])->middleware('alumno');;
 
 Route::get('/profesor', [ProfesorController::class, 'inicio'])->middleware('profe');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::post('/resultado', [ProfesorController::class, 'resultado'])->middleware('profe');

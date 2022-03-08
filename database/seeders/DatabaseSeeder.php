@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\seeders\NivelesEducativosSeeder;
+use Database\Seeders\NivelEducativoSeeder;
+use Database\Seeders\UsersSeeder;
+use Database\Seeders\DB;
+
 
 class DatabaseSeeder extends Seeder
 {
